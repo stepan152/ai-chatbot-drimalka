@@ -1,1 +1,24 @@
-chatbot.py.env
+# Ignorování souborů s citlivými údaji
+.env
+
+# Ignorování systémových souborů
+.DS_Store
+Thumbs.db
+
+# Ignorování souborů editorů
+.vscode/
+.idea/
+*.swp
+
+# Ignorování souborů z virtual environment (pokud jej používáš)
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorování logů a cache
+logs/
+*.log
+
+# Ignorování souborů vytvořených systémem
+*.rtf

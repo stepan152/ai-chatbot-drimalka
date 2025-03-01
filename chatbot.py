@@ -9,7 +9,7 @@ import numpy as np
 # Načtení API klíče z .env souboru
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
-client = openai.OpenAI(api_key=api_key)
+openai.api_key = api_key
 
 # Inicializace modelu pro embeddingy
 model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")

@@ -68,14 +68,14 @@ def ask_chatbot(prompt):
         f"{relevant_info}\n\n"
         "Pokud otázka nesouvisí s tímto tématem, odpověz neutrálně, že se zaměřuješ pouze na AI, budoucnost práce a digitální transformaci."
     )
-    response = client.chat.completions.create(
-        model="gpt-4",
-        messages=[
-            {"role": "system", "content": system_message},
-            {"role": "user", "content": prompt}
-        ]
-    )
-    return response.choices[0].message.content
+response = openai.ChatCompletion.create(
+    model="gpt-4",
+    messages=[
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": prompt}
+    ]
+)
+return response["choices"][0]["message"]["content"]
 
 # Streamlit UI
 def main():

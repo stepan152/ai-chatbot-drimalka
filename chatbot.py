@@ -68,7 +68,7 @@ def ask_chatbot(prompt):
         f"{relevant_info}\n\n"
         "Pokud otázka nesouvisí s tímto tématem, odpověz neutrálně, že se zaměřuješ pouze na AI, budoucnost práce a digitální transformaci."
     )
-response = openai.ChatCompletion.create(
+response = openai.ChatCompletion.create
     model="gpt-4",
     messages=[
         {"role": "system", "content": system_message},
